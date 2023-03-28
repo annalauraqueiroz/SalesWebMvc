@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SalesWebMvc.Data;
+using System.Globalization;
+
 using SalesWebMvc.Services;
 using System.Configuration;
 
@@ -33,7 +35,6 @@ using (var scope = app.Services.CreateScope())
     context.Database.EnsureCreated();
     DbInitializer.Initialize(context);
 }
-
 
 
 app.UseHttpsRedirection();
